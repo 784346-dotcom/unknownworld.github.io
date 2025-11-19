@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* MATRIX background */
+  background: url("https://wallpapercave.com/wp/wp2757874.gif") no-repeat center center fixed;
+  background-size: cover;
+
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Top right faded matrix image */
+.background-top-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+
+  background: url("https://wallpapercave.com/wp/wp2757874.gif") no-repeat center/contain;
+  opacity: 0.18;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Main section */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+/* Neon fade animation */
+.welcome-text {
+  font-size: 1.4rem;
+  color: #a8ffd4;
+  animation: neonFade 4s ease-in-out infinite;
+
+  text-shadow: 
+    0 0 10px #4cff9a,
+    0 0 20px #4cff9a,
+    0 0 30px #4cff9a,
+    0 0 40px #00ff88;
+}
+
+@keyframes neonFade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Bottom-right social icons */
+.bottom-right-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  gap: 15px;
+
+  z-index: 2;
+}
+
+.bottom-right-icons a {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.bottom-right-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-right-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Bottom-left contact info */
+.bottom-left-info {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: left;
+
+  z-index: 2;
+}
+
+.bottom-left-info strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+.nav-arrows {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-arrows button {
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  font-weight: bold;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: #00ff88;
+
+  border: 2px solid #00ff88;
+  border-radius: 10px;
+
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+
+  transition: 0.3s ease;
+}
+
+.nav-arrows button:hover {
+  background: rgba(0, 255, 136, 0.3);
+  transform: scale(1.1);
+}
+/* INTRODUCTION BUBBLE */
+.intro-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  z-index: 2;
+  position: relative;
+}
+
+.intro-title {
+  background: rgba(200, 200, 200, 0.85);
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  margin-bottom: 15px;
+}
+
+.intro-bubble {
+  width: 70%;
+  max-width: 800px;
+  background: rgba(180, 180, 180, 0.75);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  color: #111;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  backdrop-filter: blur(4px);
+}
+
+.intro-bubble p {
+  margin: 0;
+}
+
+/* Make text glow slightly for hacker theme */
+.intro-bubble strong {
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+}
+/* MENU BUTTON (top right) */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #00ff88;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  border: 2px solid #00ff88;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+}
+
+/* SLIDE-OUT MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(4px);
+  border-left: 2px solid #00ff88;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  z-index: 9;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu a {
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #00ff88;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  background: rgba(0,255,136,0.2);
+}

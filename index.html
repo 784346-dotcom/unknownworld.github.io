@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mo Jamel Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Right-side slide menu button -->
+<div class="menu-button" onclick="toggleMenu()">☰</div>
+
+<!-- Slide-out menu -->
+<div id="side-menu" class="side-menu">
+  <a href="#">About Me</a>
+  <a href="#">My History</a>
+  <a href="#">My Experience</a>
+
+  <!-- 🔗 NOW SCROLLS TO CONTACT SECTION -->
+  <a href="#contact-info">Contact Information</a>
+</div>
+
+<!-- Back & Forward buttons -->
+<div class="nav-arrows">
+  <button onclick="history.back()" aria-label="Go Back">←</button>
+  <button onclick="history.forward()" aria-label="Go Forward">→</button>
+</div>
+
+<div class="background-top-right"></div>
+
+<header>
+  <h1>The Unknown Code</h1>
+</header>
+
+<main>
+  <div class="intro-container">
+    <div class="intro-title">Introduction</div>
+
+    <div class="intro-bubble">
+      <p>
+        You've stumbled upon the unknown! Welcome to my world, my name is <strong>Mohammed Mahdi</strong>.
+        I am currently studying an Access to Higher Education course in Computing in which I will discover
+        the secrets of technology and code. This webpage was an assignment set by my wonderful tutor Claire,
+        who wishes she could make a webpage as awesome as me 😂
+      </p>
+    </div>
+  </div>
+</main>
+
+<!-- Social Icons Bottom Right -->
+<div class="bottom-right-icons">
+  <a href="https://www.instagram.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+  </a>
+
+  <a href="https://www.facebook.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+  </a>
+
+  <a href="mailto:784346@student.sheffcol.ac.uk">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+  </a>
+</div>
+
+<!-- ✅ PROFESSIONAL CONTACT BOX -->
+<div id="contact-info" class="bottom-left-info">
+  <h3>Contact Information</h3>
+  <p><strong>Name:</strong> Mo Jamel</p>
+  <p><strong>Email:</strong> <a href="mailto:784346@student.sheffcol.ac.uk">784346@student.sheffcol.ac.uk</a></p>
+  <p><strong>Phone:</strong> 123456789</p>
+</div>
+
+<!-- Menu script -->
+<script>
+function toggleMenu() {
+  document.getElementById("side-menu").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
